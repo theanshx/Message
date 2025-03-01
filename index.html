@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Cutiepie ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #d63384;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        #openMessage {
+            background-color: #ff66b2;
+            color: white;
+            font-weight: bold;
+        }
+
+        #openMessage:hover {
+            background-color: #ff3385;
+            transform: scale(1.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .message-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        #yes {
+            background-color: #ff66b2;
+            color: white;
+            font-weight: bold;
+        }
+
+        #yes:hover {
+            background-color: #ff3385;
+            transform: scale(1.1);
+        }
+
+        #no {
+            background-color: #ffcccc;
+            color: black;
+            cursor: not-allowed;
+        }
+
+        .final-message {
+            font-size: 22px;
+            color: #d63384;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hey Gorgeous, i've a small message for you ❤️</h2>
+        <button id="openMessage">Open Message 💌</button>
+
+        <div id="messageBox" class="message-box hidden">
+            <h3>Are you still angry on me? 😢</h3>
+            <div class="buttons">
+                <button id="yes">Yes 😤</button>
+                <button id="no">No 😢</button>
+            </div>
+        </div>
+
+        <p class="final-message hidden">hey you know that you are my favourite girl Please message me, I am waiting for you...🥺 ❤️</p>
+    </div>
+
+    <script>
+        document.getElementById('openMessage').addEventListener('click', function() {
+            document.getElementById('messageBox').classList.remove('hidden');
+            this.style.display = 'none';
+        });
+
+        document.getElementById('yes').addEventListener('click', function() {
+            document.querySelector('.final-message').classList.remove('hidden');
+            document.getElementById('messageBox').style.display = 'none';
+        });
+
+        document.getElementById('no').addEventListener('click', function() {
+            alert("You can only press Yes! 😜");
+        });
+    </script>
+
+</body>
+</html>
